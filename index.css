@@ -45,7 +45,7 @@ body{
 #cont_searchbar{
     display: flex;
     /* border: 1px solid black; */
-    background: rgba(236, 236, 236, 0.993);
+    background: rgb(245, 245, 245);
     padding: 0.8%;
     
 }
@@ -70,6 +70,8 @@ body{
 }
 #log>a{
     cursor: pointer;
+    color: gray;
+    
 }
 i{
     margin-right: 2%;
@@ -97,6 +99,7 @@ i{
 }
 #searchbar>input{
     border: none;
+    outline: none;
     width: 79%;
    height: 100%;
    padding: 0% 2%;
@@ -136,7 +139,7 @@ i{
     font-size: 13px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    /* display: flex; */
+    display: flex;
     align-items: center;
     padding:  1% 1% 1% 0% ;
     color: gray;
@@ -147,22 +150,29 @@ i{
  .dropdown {
     position: relative;
     display: inline-block;
+    width: 10%;
   }
   
  .dropdown > .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 100%;
+    line-height: 25px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
   }
-  
+  .dropdown-content>p{
+    margin-top: 25%;
+    font-size: 13px;
+}
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+.dropbtn:hover{
+    text-shadow: 0px 1px rgb(114, 114, 114);
+}
 
 
 #whole_nav{
