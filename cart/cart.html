@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0906/2558/files/Sugar_Logo_9182588f-0366-4812-9fc5-f3a4b639c044_32x.png?v=1597067859%22">
+    <script src="https://kit.fontawesome.com/f612f4d575.js" crossorigin="anonymous"></script>
+    <title>Your Shopping Cart - SUGAR COSMETICS</title>
+</head>
+<body>
+     <!-- Header Code starts here -->
+     
+
+
+
+    <!-- Header Code Ends here -->
+    <!-- Cart Page start here -->
+    <div class="container">
+
+        <div class="pink_offer">SHOP FOR 
+            <span style="color: black;">RS 4999/-
+            </span> AND GET A METTLE LIPSTICK OR 
+            BRONZE POUCH + MIRROR WORTH UP TO RS 1198/-
+        </div>  <!--offer Ads-->
+
+            <div class="title">
+                <!-- home and cart (logo) -->
+                <div class="home">
+                    <img src="https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg" alt="a">
+                    <a href="index.html"><p id="makeup">&nbsp;&nbsp;/&nbsp;&nbsp; Cart</p></a>
+                </div>
+                
+            </div>
+            <!-- <div class="address">
+                <a href="index.html">
+                    <i class="fa fa-home" style="font-size: 15px;" aria-hidden="true"></i>
+                    Home
+                </a>
+                <p>/</p>
+                <p>Cart</p>
+            </div> -->
+
+            <div class="displayData">
+                <div class="added_items">
+                    show added products
+                </div>
+                <div class="empty-cart">
+                    <!-- show empty cart  -->
+                     <img class="bag" src="https://in.sugarcosmetics.com/ic_empty_cart.png" alt="empty cart">
+                    <h6 class="baginfo">Hey! It's lonely here.<br>
+                        Your bag seems to have no company.<br>
+                        Why not add some products?</h6>
+                    <button class="shop"><h3>SHOP NOW</h3><a href="index.html"></a></button>
+                </div> 
+            </div> 
+
+
+        <div class="total_box">
+            <h2>CART TOTAL</h2>     <!-- cart total section -->
+            <div class="total_amt_box">
+                <div class="sub_total">
+                    <h4>Subtotal:</h4>
+                    <div class="sub">
+                        <h4 style="font-weight: bold;">&#8377</h4>
+                        <h4 id="bill_amt">0.00</h4>
+                    </div>
+                </div>
+                <div class="sub_total">
+                    <h4>Tax(GST):</h4>
+                    <h4>18%</h4>
+                </div>
+                <div class="line"></div>
+                <div class="sub_total">
+                    <h2>TOTAL</h2>
+                    <div class="sub">
+                        <h2 style="font-weight: bold;">&#8377</h2>
+                        <h2 id="total_amt">0.00</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="free_ship" id="freeShip">CONGRATULATIONS! YOU'VE GOT FREE SHIPPING</div>  <!--free shipping info -->
+            <div class="offer" id="offer">SHOP ABOVE RS 1999 AND GET FREE SHIPPING</div>
+            <div class="checkout" id="checkout">CHECKOUT</div>  <!--checkout button -->
+        </div>
+        <!-- modal to show user details after checkout -->
+        <div class="modal-bg">
+            <div class="modal">
+                <div class="deliAddress">
+                    <div>
+                        <h5 style="color: grey;">Deliver to</h5>
+                        <h5 id="address"></h5>
+                        <!-- <h5>2nd Floor, 91springboard, Salarpuria Tower -1 No. 22, Koramangala Industrial Layout, Koramangala, Bengaluru, Karnataka 560095</h5> -->
+                    </div>
+                    <div>
+                        <h5 style="color: grey;">Phone:</h5>
+                        <h5 id="phone"></h5>
+                    </div>
+                    <div>
+                        <h5 style="color: grey">Delivery expected</h5>
+                        <h5 id="deliveryDate">Monday</h5>
+                    </div>
+                </div>
+                <div class="modal_text">
+                    <select id="cust" onchange="SetSelectedValue()" >
+                        <option value="1">Select Payment Mode</option>
+                        <option value="DEBIT CARD">Debit Card</option>
+                        <option value="CREDIT CARD">Credit Card</option>
+                        <option value="NET BANKING">Net Banking</option>
+                        <option value="CASH ON DELIVERY">Cash On Delivery</option>
+                    </select>
+                    <button id="modal-btn">PAY NOW</button>
+                </div>
+                <a href="" style="font-size: 14px;">Click here for new registration</a>
+                <span class="modal-close">X</span>
+            </div>
+        </div>
+        <div class="modal-bg2">
+            <div class="modal">
+                <div id="loader">
+                    <h4 style="margin: 20px;">Please wait...</h4>
+                    <div class="loader"></div>
+                </div>
+                <div id="thank" class="thank">
+                    <h1 style="color: green;">Thank you for shopping with us! <img src="https://emoji.slack-edge.com/T01CBR70TN2/blob_excited/5d5d483e6784ad8a.gif" alt=""></h1>
+                    <div class="modal-thank">
+                        <h3>Your order is placed successfully!</h3>
+                        <div class="order_no">
+                            <h5>ORDER NO: #2361499443</h5>
+                            <h5 id="payment_mode_show"></h5>
+                        </div>
+                    </div>
+                    <button id="close">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cart page ends here -->
+     <!-- Footer Code starts here -->
+
+     <div id="footer">
+        <div class="footer-container">
+            <div class="footer-company-logo">
+                <div><img src="https://in.sugarcosmetics.com/Footer_sugar_icon.png" alt="company logo"></div>
+            </div>
+            <div class="footer-reachout-links">
+                <div>
+                    <div><a href="https://www.facebook.com/trySUGAR/"><img src="https://in.sugarcosmetics.com/desc-images/facebook.svg" alt=""></a></div>
+                    <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Check+this+https://in.sugarcosmetics.com/pages/offer"><i class="fa-solid fa-envelope"></i></a></div>
+                    <div><a href="https://www.instagram.com/trysugar/?hl=en"><img src="https://in.sugarcosmetics.com/desc-images/Instagram.svg" alt=""></a></div>
+                    <div><a href="https://www.pinterest.com/sugarcosmetics/"><img src="https://in.sugarcosmetics.com/desc-images/Pinterest.svg" alt=""></a></div>
+                    <div><a href="https://sugarcosmetics-blog.tumblr.com/"><img src="https://in.sugarcosmetics.com/desc-images/Tumblr.svg" alt=""></a></div>
+                    <div><a href="https://www.youtube.com/channel/UCKVqnev2idvmUNKc2b91B8g"><img src="https://in.sugarcosmetics.com/desc-images/Youtube.svg" alt=""></a></div>
+                    <div><a href="https://twitter.com/trySUGAR"><img src="https://in.sugarcosmetics.com/sharebtn/Twitter.svg" alt=""></i></a></div>
+                </div>
+            </div>
+            <div class="footer-signup-app">
+                <div>
+                    <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+                    <div>
+                        <input type="email" placeholder="Your email address" role="textbox" >
+                        <div class="footer-signup-app-button"><button role="button">SIGN UP</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h5>GET THE NEW SUGAR APP TODAY.</h5>
+                    <div>
+                        <div id="footer-para"><p>Tap into a better shopping experience.</p></div>
+                        <div id="footer-play-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/playstore.png" alt=""></a></div>
+                        <div id="footer-apple-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/apple-store.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-information">
+                <div><h5>INFORMATION</h5></div>
+                <div>
+                    <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">Contact Us</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms & Consitions</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/returns-refunds">Returns</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/faqs">FAQs</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/about-us">About Us</a></div>
+                </div>
+            </div>
+            <div class="footer-get-in-touch">
+                <div><h5>GET IN TOUCH</h5></div>
+                <div>
+                    <div class="footer-get-in-touch-box1">
+                        <div>
+                            <img src="https://in.sugarcosmetics.com/desc-images/phone_android_white.svg" alt="">
+                            <div>Call us at</div>
+                        </div>
+                        <a href="">1800-209-9933</a>
+                        <div>Monday to Friday : 9 AM to 7 PM</div>
+                    </div>
+                    <div class="footer-get-in-touch-box2">
+                        <div>Support</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">hello@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box3">
+                        <div>WORK WITH US</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=careers@sugarcosmetics.com">careers@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box4">
+                        <div>PRESS & MEDIA</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pr@sugarcosmetics.com">pr@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box5">
+                        <div>INFLUENCER COLLAB</div>
+                        <a href="https://blog.sugarcosmetics.com/collab">JOIN US</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</div>
+        </div>
+    </div>
+
+
+    <!-- Footer Code Ends here -->
+</div>
+    <script src="cart.js"></script>
+</body>
+</html>
