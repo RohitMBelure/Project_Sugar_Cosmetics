@@ -215,7 +215,7 @@ i{
 /* ************cards part ************ */
 .cd_parent{
     width: 95%;
-    height: 450px;
+    /* height: 450px; */
     margin: auto;
     /* border: 1px solid black; */
 }
@@ -223,7 +223,6 @@ i{
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    height: 350px;
     /* border: 1px solid black; */
     margin: auto;
     justify-content: space-evenly;
@@ -231,7 +230,6 @@ i{
 }
 #cards>div{
     /* border: 1px solid black; */
-    overflow: hidden;
     width: 20%;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -271,8 +269,10 @@ i{
 .level4{
     text-align: center;
     cursor: pointer;
-
-    
+    width: 100%;   
+}
+.level4>div>img{
+    width: 100%;
 }
 .level4>h2{
     margin-top: 2%;
@@ -280,16 +280,44 @@ i{
     cursor: text;
    
 }
+
+/* #cont_videos{
+    display: flex;
+    width: 60%;
+    height: 200px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#cont_videos{
+    display: block;
+    width: 15%;
+    height: 100%;
+}
+#cont_videos>video{
+    width: 100%;
+    height: 100%;
+} */
 .deals{
     display: flex;
     justify-content: space-around;
+    width: 100%;
+}
+.deals>div{
+    width: 31%;
+    object-fit: contain;
+}
+.deals>div>img{
+    width: 100%;
+    object-fit: contain;
 }
 .gift_sets1>img{
     width: 100%;
-    height: 245px;
+    height: 150%;
+    margin-top: 9%;
+    margin-bottom: 9%;
 }
 .scare>img{
-    height: 245px;
+    height: 150%;
 }
 .level_x>div{
     width: 23%;
@@ -303,4 +331,8 @@ i{
 }
 .rd_dis{
     color: red;
+}
+#top_pick>div{
+   width: 45%;
+
 }
