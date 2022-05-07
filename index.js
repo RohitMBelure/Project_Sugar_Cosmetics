@@ -1,4 +1,12 @@
 
+
+function topbarfun(){
+    const topbar = document.querySelector('#hdoffer');
+    topbar.style.display="none"
+
+}
+
+
 var addToCardArr = JSON.parse(localStorage.getItem("addToCardData")) || []
 
 
@@ -10,10 +18,10 @@ function bestSellerCardOne(){
     console.log(productImage, productName, productCurrency, productPrice)
 
     let addToCardObject = {
-        ProductImage: productImage
-        ,ProductName: productName,
+        img: productImage
+        ,name: productName,
         ProductCurrency: productCurrency,
-        productPrice: productPrice,
+        price: productPrice,
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
@@ -27,10 +35,10 @@ function superSaverCart1(){
     console.log(productImage, productName, productCurrency, productPrice)
 
     let addToCardObject = {
-        ProductImage: productImage
-        ,ProductName: productName,
+        img: productImage
+        ,name: productName,
         ProductCurrency: productCurrency,
-        productPrice: productPrice,
+        price: productPrice,
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
@@ -44,10 +52,10 @@ function superSaverCart2(){
     console.log(productImage, productName, productCurrency, productPrice)
 
     let addToCardObject = {
-        ProductImage: productImage
-        ,ProductName: productName,
+        img: productImage
+        ,name: productName,
         ProductCurrency: productCurrency,
-        productPrice: productPrice,
+        price: productPrice,
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
@@ -61,10 +69,10 @@ function superSaverCart3(){
     console.log(productImage, productName, productCurrency, productPrice)
 
     let addToCardObject = {
-        ProductImage: productImage
-        ,ProductName: productName,
+        img: productImage
+        ,name: productName,
         ProductCurrency: productCurrency,
-        productPrice: productPrice,
+        price: productPrice,
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
