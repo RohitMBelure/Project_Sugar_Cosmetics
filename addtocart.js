@@ -165,7 +165,7 @@ function addtocart(el){
  
   arr.push(el)
   localStorage.setItem("addToCardData",JSON.stringify(arr))
-
+  window.location.reload();
 
 }
 
