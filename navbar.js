@@ -1,5 +1,5 @@
 var usename = JSON.parse(localStorage.getItem("username"))
-var products = JSON.parse(localStorage.getItem("addToCard"))
+var products = JSON.parse(localStorage.getItem("addToCardData")) || []
 
 
 
@@ -172,7 +172,7 @@ function sac(){
 }
 
 
-if(products.length>0)
+if(products.length>null)
 {
     document.querySelector("#productnos>p").innerText="("+products.length+")"
 }
