@@ -1,8 +1,0 @@
-
-
-
-{
-    imgurl:"https://cdn.shopify.com/s/files/1/0906/2558/products/1_6f55bcac-3e42-4253-88ee-cec0fa43c62a.jpg?v=1645608270",
-    p.name:"Smudge me not minis set black" ,
-   p.price:"₹ 799.00" ,
-}
