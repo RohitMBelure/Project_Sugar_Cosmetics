@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar Cosmetics || Beauty Products</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/173cb482a3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <!-- ****************************************navbar**************************************** -->
+    <div id="whole_nav">
+
+        <div id="hdoffer">
+            <div><p>FREE eyeshadow palette worth 1199 on a spend of 1199</p></div> 
+            <div><p onclick="cutoffer()">X</p></div>
+        </div>
+    
+        <div id="cont_searchbar">
+          <div id="logo"><img src="https://in.sugarcosmetics.com/desc-images/SUGARLogo1.png" alt="img.logo"> </div>
+    
+          <div  id="searchbar"> <input type="text" placeholder='Try "Liquid Lipstick" '><button>Search</button> </div>
+    
+          <div   id="log"><div id="lg">Log Out</div> </div>
+          
+    
+          <div  id="cartpg">
+              <div> <a href="# "><i class="fa-solid fa-heart"></i></a> </div>
+              <div id="productnos" onclick="cartpage()"> <a href="# "><i class="fa-solid fa-bag-shopping"></i></a> <p></p> </div>
+              <div> <a href=" #"><i class="fa-solid fa-certificate"></i></a> </div>
+          </div>
+        </div>
+    
+        <nav id="nav">
+           <div id="product_pages">
+    
+            <div class="dropdown">
+                <div class="dropbtn"  onclick="makeupp()">MAKEUP</div>
+                <div class="dropdown-content">
+                  <p>LIPS</p>
+                  <p>FACE</p>
+                  <p>EYES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn" onclick="brushpage()">BRUSHES</div>
+                <div class="dropdown-content">
+                  <p>FACE BRUSHIES</p>
+                  <p>EYES BRUSHIES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn">SKINCARE</div>
+                <div class="dropdown-content">
+                  <p>MOISTURIZER</p>
+                  <p>MASKS</p>
+                  <p>SETTING MISTS</p>
+                  <p>SHEET MASK COMBO</p>
+                  <p>COFFEE CULTURE RANGE</p>
+                </div>
+              </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">TRENDING</div> 
+                    <div class="dropdown-content">
+                        <p>SUGAR MERCH STATION</p>
+                        <p>MAKEUP KITS</p>
+                        <p>BESTSELLERS</p>
+                      </div> 
+                </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">BLOG</div> 
+                    <div class="dropdown-content">
+                        <p>FEATURED</p>
+                        <p>MAKEUP</p>
+                        <p>SKINCARE</p>
+                      </div>
+                </div>
+                <div class="dropbtn">OFFERS</div>
+           </div>
+        </nav>
+    </div>
+    
+    
+    
+    
+    
+    <!-- *************Login & Signup ************** -->
+    <div id="main">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Login/Sign Up Using Phone</p>
+                </div>
+                <div id="mobno">
+                    <p>+91</p>
+                    <input id="i1" type="tel" maxlength="1" onkeyup="z(event,'i2','','i1')">
+                    <input id="i2" type="tel" maxlength="1" onkeyup="z(event,'i3','i1','i2')">
+                    <input id="i3" type="tel" maxlength="1" onkeyup="z(event,'i4','i2','i3')">
+                    <input id="i4" type="tel" maxlength="1" onkeyup="z(event,'i5','i3','i4')">
+                    <input id="i5" type="tel" maxlength="1" onkeyup="z(event,'i6','i4','i5')">
+                    <input id="i6" type="tel" maxlength="1" onkeyup="z(event,'i7','i5','i6')">
+                    <input id="i7" type="tel" maxlength="1" onkeyup="z(event,'i8','i6','i7')">
+                    <input id="i8" type="tel" maxlength="1" onkeyup="z(event,'i9','i7','i8')">
+                    <input id="i9" type="tel" maxlength="1" onkeyup="z(event,'i10','i8','i9')">
+                    <input id="i10" type="tel" maxlength="1" onkeyup="z(event,'','i9','i10')">
+                    <button >Request OTP</button>
+                </div>
+                <p>Enter your phone number to request an OTP</p>
+                <hr>
+                <p>Enter the 4 digit OTP received on your phone</p>
+                <div id="otp">
+                    <input id="j1" type="tel" maxlength="1" onkeyup="x(event,'j2','','j1')">
+                    <input id="j2" type="tel" maxlength="1" onkeyup="x(event,'j3','j1','j2')">
+                    <input id="j3" type="tel" maxlength="1" onkeyup="x(event,'j4','j2','j3')">
+                    <input id="j4" type="tel" maxlength="1" onkeyup="x(event,'','j3','j4')">
+                </div>
+                <button id="votp">Verify OTP</button><br>
+                <label id="check">
+                    <input type="checkbox" checked>
+                    <span id="z">Get Important Updates on Whatsapp.</span>
+                    <a id="terms" href="https://in.sugarcosmetics.com/pages/terms-conditions" class="tnc">Terms and Conditions</a>
+                </label>
+            </div>
+            <p id="btext">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+    
+    
+    
+    <!-- *************register ************** -->
+    <div id="mainx">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close1">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Welcome!</p>
+                </div>
+                
+                <p id="verify"></p>
+                <div id="fbg">
+                    <img src="https://in.sugarcosmetics.com/desc-images/facebook_login.svg" alt="">
+                    <p>or</p>
+                    <img src="https://in.sugarcosmetics.com/desc-images/google.png" alt="">
+                </div>
+                <hr>
+                <p>Or Enter Account Details</p>
+                <div id="fln">
+                    <input id="fn" type="text" placeholder="First Name">
+                    <input id="ln" type="text" placeholder="Last Name">
+                </div>
+                <input id="ema" type="text" placeholder="Email Address"><br>
+                <button id="sac">Save And Continue</button><br>
+                
+            </div>
+            <p id="btext1">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+
+</body>
+
+<script src="login.js"></script>
+<script src="register.js"></script>
+<script src="navbar.js"></script>
+<script src="https://kit.fontawesome.com/266a9d5dc8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/48afb18fb2.js" crossorigin="anonymous"></script>
