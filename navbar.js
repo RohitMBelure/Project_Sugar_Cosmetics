@@ -1,5 +1,11 @@
 var usename = JSON.parse(localStorage.getItem("username"))
-var products = [1,2,3]//JSON.parse(localStorage.getItem("addToCard"))
+var products = JSON.parse(localStorage.getItem("addToCard"))
+
+
+
+function homez(){
+    window.open("index.html","_self")
+}
 
 function makeupp(){
     window.open("product1.html","_self")
