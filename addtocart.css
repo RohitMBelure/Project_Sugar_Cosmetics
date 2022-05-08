@@ -1,0 +1,174 @@
+
+*{
+    margin: 0px;
+    padding: 0px
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@300;400&display=swap');
+
+
+#container{
+
+    width: 80%;
+    margin: auto;
+    /* border: solid red; */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* margin-top: 40px; */
+    font-family: 'Quicksand', sans-serif;
+}
+
+#prdbox{
+
+    display: flex;
+    gap: 40px;
+}
+
+#pr1>img{
+    height: 400px;
+
+}
+#ph2{
+    margin-top: 20px;
+}
+#bttn1{
+    padding: 10px 70px 10px 70px;
+    background-color: black;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  
+}
+#bttn2{
+
+    padding: 10px 20px 10px 20px;
+    /* background-color: black; */
+    /* color: #fff; */
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+#stars{
+    /* border: solid red; */
+  
+}
+#colors{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 80%;
+   
+    padding: 10px;
+}
+
+
+#pincode{
+    display: flex;
+    gap: 5px;
+    height: 35px;
+
+}
+
+
+#inppin{
+   
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    width: 10%;
+}
+#socialmed{
+    display: flex;
+    gap: 7px;
+    
+
+}
+#pinbut{
+
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+#socil{
+    height: 22px;
+    width: 22px;
+    margin-top: 18px;
+    
+
+}
+
+
+#discrip{
+    display: flex;
+    justify-content: space-between;
+    width: 94%;
+    margin: auto;
+
+    color: rgb(46, 46, 232);
+    cursor: pointer;
+    line-height: 10px;
+   
+}
+
+#txt1,#txt2,#txt3,#txt4,#txt5{
+    padding: 10px 70px 10px 70px;
+    border: 0px;
+    color: rgb(81, 81, 164);
+}
+
+#extprod{
+    display: grid;
+    grid-template-columns:repeat(4,250px);
+ 
+    display: flex;   
+    justify-content: space-around;
+    margin-top: 30px;
+}
+#extprod>div{
+    /* border: solid yellowgreen; */
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    /* padding: 10px; */
+
+}
+#txtapnd{
+    padding: 30px   ;
+    margin-left: 20px;
+}
+
+
+#extprod>div>img{
+
+    width:220px ;
+    
+}
+#extprod>div>h4{
+    text-align: center;
+    /* margin-top: -7px; */
+    font-weight: bold;
+    line-height: 35px;
+}
+#extprod>div>h5{
+    text-align: center;
+    /* margin-top: -10px; */
+    font-weight: bold;
+    line-height: 20px;
+
+}
+#btnxtr{
+    text-align: center;
+    /* margin-top: -20px; */
+    height: 30px;
+    color: #fff;
+    background-color: black;
+    padding: 10px;
+}
+
