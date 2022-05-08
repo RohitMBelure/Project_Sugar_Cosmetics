@@ -1,12 +1,4 @@
 
-
-function topbarfun(){
-    const topbar = document.querySelector('#hdoffer');
-    topbar.style.display="none"
-
-}
-
-
 var addToCardArr = JSON.parse(localStorage.getItem("addToCardData")) || []
 
 
