@@ -17,6 +17,7 @@ function bestSellerCardOne(){
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
+    window.location.reload();
 }
 
 function superSaverCart1(){
@@ -34,6 +35,8 @@ function superSaverCart1(){
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
+    window.location.reload();
+
 }
 
 function superSaverCart2(){
@@ -51,6 +54,8 @@ function superSaverCart2(){
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
+    window.location.reload();
+
 }
 
 function superSaverCart3(){
@@ -68,4 +73,6 @@ function superSaverCart3(){
     }
     addToCardArr.push(addToCardObject);
     localStorage.setItem("addToCardData", JSON.stringify(addToCardArr))
+    window.location.reload();
+
 }
