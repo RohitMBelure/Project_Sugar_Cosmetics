@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+        *{
+            margin: 0;padding: 0;
+        }
+        *:focus{
+            outline: none;
+        }
+        
+        #main{
+            width: 100%;display: flex;font-family: Quicksand;display: none;
+            height: 100vh;position: fixed;top: 0;right: 0;z-index: 100;
+        }
+        #trans{
+            width: 50%;background: rgba(0, 0, 0, 0.8);height: 134vh
+            
+        }
+        #login{
+            width: 50%;padding-left: 10px;height: 134vh;
+            background-image: url("https://in.sugarcosmetics.com/Login_bg.svg");
+            background-size: cover cover;
+        }
+        #login>h4{
+            color: white;margin-left: 22px;margin-top: 18px;
+        }
+        #login>h2{
+            color: white;margin-left: 15px;margin-top: 14px;font-weight: bold;
+        }
+        #main1{
+            width: 95%;box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;height: 48%;margin: auto;
+            border: 1px solid transparent;margin-top: 20px;background-color: white;
+            border-radius: 5px;
+        }
+        #main1>div:nth-child(1){
+            display: flex;margin-top: 20px;margin-left: 17px;
+        }
+        #mob{
+            width: 5%;
+        }
+        #mob+p{
+            display: inline;font-size: 25px;font-weight: bold;margin-left: 15px;
+        }
+        #mobno{
+            display: flex;margin-top: 28px;margin-left: 17px;width: 95%;
+        }
+        #mobno>p{
+            font-size: 25px;margin-right: 12px;
+        }
+        #mobno>input{
+            border: none;
+            border-top: none;
+            border-right: none;
+            border-bottom: 1px solid rgb(160, 160, 163);
+            border-left: none;
+            width: 5.7%;text-align: center;font-size: 25px;
+            margin-left: 5px;
+            
+        }
+        #mobno>button{
+            padding: 12px 23px 12px 23px;background-color: gray;border: none;font-size: 14px;color: white;
+            margin-left: 29px;
+        }
+        #mobno+p{
+            color: rgb(211, 6, 74);margin-top: 28px;margin-left: 20px
+        }
+        hr{
+           margin: auto; width: 93%;margin-top: 24px;
+        }
+        hr+p{
+            margin-top: 32px;margin-left: 20px
+        }
+        #otp{
+            display: flex;margin-top: 10px;margin-left: 17px;width: 95%;
+        }
+        #otp>input{
+            width: 4%;border-radius: 3px;height: 30px;border: 0.5px solid black;margin-left: 10px;
+            background-color: rgb(248, 245, 245);text-align: center;font-weight: bolder;
+        }
+        #otp+button{
+            background-color: rgb(245, 153, 183);border: none;padding: 12px 55px 12px 55px;font-size: 14px;
+            color: white;margin-top: 20px;margin-left: 20px;
+        }
+        input[type="checkbox"]{
+            margin-top: 20px;margin-left: 20px;width: 15px;height: 15px;outline: 2px solid rgb(240, 122, 171);
+            border: none;cursor: pointer;
+        }
+        #terms{
+            text-decoration: none;font-weight: bold;text-decoration: underline;color: black;
+        }
+        #check input[input=checkbox]:checked #z{
+            background-color: pink;
+        }
+        #btext{
+            width: 95%;font-weight: bolder;margin: auto;margin-top: 40px;text-align: center;
+            line-height: 26px;overflow: hidden;
+        }
+        #btext+p{
+            width: 100%;margin: auto;margin-top: 40px;font-size: 13px;text-align: center;overflow: hidden;
+        }
+        #btext+p>a{
+            font-weight: bolder;color: black;
+        }
+        #close{
+            cursor: pointer;
+        }
