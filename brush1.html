@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brush</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/173cb482a3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&family=Open+Sans&family=Poppins:wght@200;400;600&family=Radio+Canada&family=Roboto&family=Roboto+Condensed:wght@400;700&family=Source+Sans+Pro&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        @font-face {
+            font-family: Neutra_Display_Titling;
+            src: url(Fonts/Neutra_Display_Titling.otf);
+        }
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background-color: rgb(239, 242, 247);
+        }
+        #top{
+           margin: 0 auto; width: 90%;margin-top: 40px;display: flex;justify-content: space-between;
+        }
+        .home{
+            display: flex;justify-content: center;align-items: center;float: left;cursor: pointer;
+        }
+        .home>a>p{
+            color: gray;font-family: Quicksand;
+        }
+        .home>a{
+            text-decoration: none;
+        }
+        .right{
+            float: right;
+        }
+        .sort{
+            margin-left: 45px;position: relative;
+        }
+        #makeup{
+            font-weight: bold;
+        }
+        #makeup2{
+            margin-left: 65px;font-family: Quicksand;color: black;margin-top: 12px;
+        }
+        #product{
+            display: grid;width: 80%;grid-template-columns: repeat(4,1fr);margin: auto;
+            gap: 50px;margin-top: 26px;text-align: center;margin-bottom: 25px;
+        }
+        #product>div{
+            position: relative;background-color: white;height: 435px;cursor: pointer;
+        }
+        #product>div:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #product>div:hover #sbox{
+            display: flex;
+        }
+        #sbox{
+            display: flex;height: 6.3%;width: 100%;display: none;
+        }
+        #sbox>div:nth-child(1){
+           display: flex; width: 25%;justify-content: center;align-items: center;
+           border: 1px solid black;
+        }
+        #sbox>div:nth-child(1)>img{
+            height: 70%;
+        }
+        #sbox>div:nth-child(2){
+           display: flex; width: 75%;justify-content: center;align-items: center;background-color: black;
+           color: white;font-size: 10px;font-family: Quicksand;
+        }
+        #pimg{
+            width: 90%;margin-top: 10%;
+        }
+        #shades{
+            display: flex;position: absolute;top: 2px;right: 2px;height: 3.5%;
+            justify-content: center;align-items: center;
+        }
+        #product>div>h2{
+            font-size: 13px;color: grey;font-family: Neutra_Display_Titling;width: 93%;margin: auto;height: 8%;
+            font-weight: lighter;line-height: 20px;overflow: hidden;
+        }
+        #price{
+            font-family: Quicksand;font-size: 13px;color: black;font-weight: bold;margin-top: 8px;
+        }
+        #price+div{
+            display: flex;height: 5%;margin: auto;justify-content: center;align-items: center;
+            font-family: Quicksand;font-size: 13px;color: black;font-weight: bold;margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        #price+div>img{
+            height: 23px;
+        }
+        #sort{
+            position: absolute;width: 370%;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            top: 23px;right: 0px;height: 140px;
+            background-color: white;z-index: 1;display: none;
+        }
+        #sort>div:nth-child(1){
+            display: flex;justify-content: space-between;align-items: center;margin: auto;height: 34%;
+            font-family: Quicksand;font-weight: bold;background-color: white;padding: 0px 10px 0px 10px;
+            font-size: 15px;
+        }
+        .sort1,.sort2,.sort3{
+            display: flex;height: 22%;;align-items: center;
+            font-family: Quicksand;font-weight: bold;background-color: white;padding: -2px 10px -2px 10px;
+            font-size: 15px;border: 1px solid white;
+        }
+        #htl,#lth{
+            height: 50%;margin-right: 10px;
+        }
+        .sort1,.sort2:hover,.sort3:hover{
+            background-color: gray;color: white;
+        }
+        .sort:hover #sort{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- ****************************************navbar**************************************** -->
+    <div id="whole_nav">
+
+        <div id="hdoffer">
+            <div><p>FREE eyeshadow palette worth 1199 on a spend of 1199</p></div> 
+            <div><p onclick="cutoffer()">X</p></div>
+        </div>
+    
+        <div id="cont_searchbar">
+          <div id="logo"><img onclick="homez()" src="https://in.sugarcosmetics.com/desc-images/SUGARLogo1.png" alt="img.logo"> </div>
+    
+          <div  id="searchbar"> <input type="text" placeholder='Try "Liquid Lipstick" '><button>Search</button> </div>
+    
+          <div   id="log"><div id="lg">Log Out</div> </div>
+          
+    
+          <div  id="cartpg">
+              <div> <a href="# "><i class="fa-solid fa-heart"></i></a> </div>
+              <div id="productnos" onclick="cartpage()"> <a href="# "><i class="fa-solid fa-bag-shopping"></i></a> <p></p> </div>
+              <div> <a href=" #"><i class="fa-solid fa-certificate"></i></a> </div>
+          </div>
+        </div>
+    
+        <nav id="nav">
+           <div id="product_pages">
+    
+            <div class="dropdown">
+                <div class="dropbtn"  onclick="makeupp()">MAKEUP</div>
+                <div class="dropdown-content">
+                  <p>LIPS</p>
+                  <p>FACE</p>
+                  <p>EYES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn" onclick="brushpage()">BRUSHES</div>
+                <div class="dropdown-content">
+                  <p>FACE BRUSHIES</p>
+                  <p>EYES BRUSHIES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn">SKINCARE</div>
+                <div class="dropdown-content">
+                  <p>MOISTURIZER</p>
+                  <p>MASKS</p>
+                  <p>SETTING MISTS</p>
+                  <p>SHEET MASK COMBO</p>
+                  <p>COFFEE CULTURE RANGE</p>
+                </div>
+              </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">TRENDING</div> 
+                    <div class="dropdown-content">
+                        <p>SUGAR MERCH STATION</p>
+                        <p>MAKEUP KITS</p>
+                        <p>BESTSELLERS</p>
+                      </div> 
+                </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">BLOG</div> 
+                    <div class="dropdown-content">
+                        <p>FEATURED</p>
+                        <p>MAKEUP</p>
+                        <p>SKINCARE</p>
+                      </div>
+                </div>
+                <div class="dropbtn">OFFERS</div>
+           </div>
+        </nav>
+    </div>
+    
+    
+    
+    
+    
+    <!-- *************Login & Signup ************** -->
+    <div id="main">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Login/Sign Up Using Phone</p>
+                </div>
+                <div id="mobno">
+                    <p>+91</p>
+                    <input id="i1" type="tel" maxlength="1" onkeyup="z(event,'i2','','i1')">
+                    <input id="i2" type="tel" maxlength="1" onkeyup="z(event,'i3','i1','i2')">
+                    <input id="i3" type="tel" maxlength="1" onkeyup="z(event,'i4','i2','i3')">
+                    <input id="i4" type="tel" maxlength="1" onkeyup="z(event,'i5','i3','i4')">
+                    <input id="i5" type="tel" maxlength="1" onkeyup="z(event,'i6','i4','i5')">
+                    <input id="i6" type="tel" maxlength="1" onkeyup="z(event,'i7','i5','i6')">
+                    <input id="i7" type="tel" maxlength="1" onkeyup="z(event,'i8','i6','i7')">
+                    <input id="i8" type="tel" maxlength="1" onkeyup="z(event,'i9','i7','i8')">
+                    <input id="i9" type="tel" maxlength="1" onkeyup="z(event,'i10','i8','i9')">
+                    <input id="i10" type="tel" maxlength="1" onkeyup="z(event,'','i9','i10')">
+                    <button >Request OTP</button>
+                </div>
+                <p>Enter your phone number to request an OTP</p>
+                <hr>
+                <p>Enter the 4 digit OTP received on your phone</p>
+                <div id="otp">
+                    <input id="j1" type="tel" maxlength="1" onkeyup="x(event,'j2','','j1')">
+                    <input id="j2" type="tel" maxlength="1" onkeyup="x(event,'j3','j1','j2')">
+                    <input id="j3" type="tel" maxlength="1" onkeyup="x(event,'j4','j2','j3')">
+                    <input id="j4" type="tel" maxlength="1" onkeyup="x(event,'','j3','j4')">
+                </div>
+                <button id="votp">Verify OTP</button><br>
+                <label id="check">
+                    <input type="checkbox" checked>
+                    <span id="z">Get Important Updates on Whatsapp.</span>
+                    <a id="terms" href="https://in.sugarcosmetics.com/pages/terms-conditions" class="tnc">Terms and Conditions</a>
+                </label>
+            </div>
+            <p id="btext">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+    
+    
+    
+    <!-- *************register ************** -->
+    <div id="mainx">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close1">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Welcome!</p>
+                </div>
+                
+                <p id="verify"></p>
+                <div id="fbg">
+                    <img src="https://in.sugarcosmetics.com/desc-images/facebook_login.svg" alt="">
+                    <p>or</p>
+                    <img src="https://in.sugarcosmetics.com/desc-images/google.png" alt="">
+                </div>
+                <hr>
+                <p>Or Enter Account Details</p>
+                <div id="fln">
+                    <input id="fn" type="text" placeholder="First Name">
+                    <input id="ln" type="text" placeholder="Last Name">
+                </div>
+                <input id="ema" type="text" placeholder="Email Address"><br>
+                <button id="sac">Save And Continue</button><br>
+                
+            </div>
+            <p id="btext1">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- ************Brushes************** -->
+    <div id="top">
+        <div class="home">
+            <img onclick="homepage1()" src="https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg" alt="a">
+            <a href=""><p id="makeup">&nbsp;&nbsp;/&nbsp;&nbsp;Blend trend makeup brush</p></a>
+        </div>
+        <div id="right">
+            <div class="home loginp" >
+                <img src="https://in.sugarcosmetics.com/desc-images/filterIcon.png" alt="a">
+                <a href=""><p>&nbsp;&nbsp;Filters</p></a>
+            </div>
+            <div class="home sort">
+                <img src="https://in.sugarcosmetics.com/desc-images/sortIcon.png" alt="a">
+                <a href=""><p>&nbsp;&nbsp;Sort</p></a>
+                <div id="sort">
+                    <div>
+                        <p>Select Sorting</p>
+                        <p id="clear">Clear All</p>
+                    </div>
+                    <div class="sort1">
+                        <img src="product image\up-down-arrow.png" alt="">Relevance
+                    </div>
+                    <div class="sort2">
+                        <img id="htl" src="product image/arrow.png" alt="">Price - High to Low
+                    </div>
+                    <div class="sort3">
+                        <img id="lth" src="product image/down-arrow.png" alt="">Price - Low to High
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+    <p id="makeup2">Makeup Brushes&nbsp;&nbsp;-&nbsp;&nbsp;</p>
+    <div id="product"></div>
+
+
+    <!-- ************************footer************************ -->
+    <div id="footer">
+        <div class="footer-container">
+            <div class="footer-company-logo">
+                <div><img src="https://in.sugarcosmetics.com/Footer_sugar_icon.png" alt="company logo"></div>
+            </div>
+            <div class="footer-reachout-links">
+                <div>
+                    <div><a href="https://www.facebook.com/trySUGAR/"><img src="https://in.sugarcosmetics.com/desc-images/facebook.svg" alt=""></a></div>
+                    <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Check+this+https://in.sugarcosmetics.com/pages/offer"><i class="fa-solid fa-envelope"></i></a></div>
+                    <div><a href="https://www.instagram.com/trysugar/?hl=en"><img src="https://in.sugarcosmetics.com/desc-images/Instagram.svg" alt=""></a></div>
+                    <div><a href="https://www.pinterest.com/sugarcosmetics/"><img src="https://in.sugarcosmetics.com/desc-images/Pinterest.svg" alt=""></a></div>
+                    <div><a href="https://sugarcosmetics-blog.tumblr.com/"><img src="https://in.sugarcosmetics.com/desc-images/Tumblr.svg" alt=""></a></div>
+                    <div><a href="https://www.youtube.com/channel/UCKVqnev2idvmUNKc2b91B8g"><img src="https://in.sugarcosmetics.com/desc-images/Youtube.svg" alt=""></a></div>
+                    <div><a href="https://twitter.com/trySUGAR"><img src="https://in.sugarcosmetics.com/sharebtn/Twitter.svg" alt=""></i></a></div>
+                </div>
+            </div>
+            <div class="footer-signup-app">
+                <div>
+                    <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+                    <div>
+                        <input type="email" placeholder="Your email address" role="textbox" >
+                        <div class="footer-signup-app-button"><button role="button">SIGN UP</button></div>
+                    </div>
+                </div>
+                <div>
+                    <h5>GET THE NEW SUGAR APP TODAY.</h5>
+                    <div>
+                        <div id="footer-para"><p>Tap into a better shopping experience.</p></div>
+                        <div id="footer-play-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/playstore.png" alt=""></a></div>
+                        <div id="footer-apple-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/apple-store.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-information">
+                <div><h5>INFORMATION</h5></div>
+                <div>
+                    <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">Contact Us</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms & Consitions</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/returns-refunds">Returns</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/faqs">FAQs</a></div>
+                    <div><a href="https://in.sugarcosmetics.com/pages/about-us">About Us</a></div>
+                </div>
+            </div>
+            <div class="footer-get-in-touch">
+                <div><h5>GET IN TOUCH</h5></div>
+                <div>
+                    <div class="footer-get-in-touch-box1">
+                        <div>
+                            <img src="https://in.sugarcosmetics.com/desc-images/phone_android_white.svg" alt="">
+                            <div>Call us at</div>
+                        </div>
+                        <a href="">1800-209-9933</a>
+                        <div>Monday to Friday : 9 AM to 7 PM</div>
+                    </div>
+                    <div class="footer-get-in-touch-box2">
+                        <div>Support</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">hello@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box3">
+                        <div>WORK WITH US</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=careers@sugarcosmetics.com">careers@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box4">
+                        <div>PRESS & MEDIA</div>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pr@sugarcosmetics.com">pr@sugarcosmetics.com</a>
+                    </div>
+                    <div class="footer-get-in-touch-box5">
+                        <div>INFLUENCER COLLAB</div>
+                        <a href="https://blog.sugarcosmetics.com/collab">JOIN US</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    var data = [
+  {
+   name: "Blend Trend Eyeshadow Brush - 043 Round Xl",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-14_1.jpg?v=1627659982",
+   rating: "4.8",
+   reviews: "(5)"
+  },
+  {
+   name: "Blend Trend Dual Face Brush - 075 Powder + Foundation",
+   price: "599",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-12-min.jpg?v=1627573647",
+   rating: "4.8",
+   reviews: "(38)"
+  },
+  {
+   name: "Blend Trend Foundation Brush - 052 Kabuki",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFoundationBrush-052Kabuki.jpg?v=1627573664",
+   rating: "4.8",
+   reviews: "(25)"
+  },
+  {
+   name: "Blend Trend Face Brush - 003 Contour",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFaceBrush-003Contour.jpg?v=1627659996",
+   rating: "4.5",
+   reviews: "(13)"
+  },
+  {
+   name: "Blend Trend Eyeshadow Brush - 042 Round",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-3-min.jpg?v=1627573657",
+   rating: "4.4",
+   reviews: "(5)"
+  },
+  {
+   name: "EYES & FACE Combo",
+   price: "649",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/1_1.jpg?v=1630683833",
+   rating: "4.4",
+   reviews: "(5)"
+  },
+  {
+   name: "Blend Trend Face Brush - 001 Blush",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFaceBrush-001Blush.jpg?v=1627659984",
+   rating: "4.9",
+   reviews: "(15)"
+  },
+  {
+   name: "Blend Trend Face Brush - 007 Powder",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFaceBrush-007Powder.jpg?v=1627660008",
+   rating: "4.9",
+   reviews: "(23)"
+  },
+  {
+   name: "Blend Trend Face Brush - 006 Highlighter",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BlendTrendFaceBrush-006Highlighter.jpg?v=1627660002",
+   rating: "4.7",
+   reviews: "(21)"
+  },
+  {
+   name: "Blend Trend Dual Eyeshadow Brush - 412 Flat + Round",
+   price: "599",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-5-min.jpg?v=1627573639",
+   rating: "5",
+   reviews: "(2)"
+  },
+  {
+   name: "Blend Trend Dual Eyeshadow Brush - 413 Flat + Round Xl",
+   price: "599",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-13.jpg?v=1627659977",
+   rating: "5",
+   reviews: "(2)"
+  },
+  {
+   name: "Blend Trend Eyeshadow Brush - 041 Flat",
+   price: "399",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/Blend-Trend-WBG-images-2-min.jpg?v=1627573652",
+   rating: "5",
+   reviews: "(3)"
+  },
+  {
+   name: "Beginners Essential Combo 1",
+   price: "999",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BeginnersEssentialsCombo1-WBGimages.jpg?v=1630683801",
+   rating: "5",
+   reviews: "(1)"
+  },
+  {
+   name: "Beginners Essential Combo 2",
+   price: "799",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BeginnersEssentialsCombo2-WBGimages.jpg?v=1630683812",
+   rating: "(5.0)",
+   reviews: "(5)"
+  },
+  {
+   name: "Face Essentials Combo",
+   price: "1499",
+   img: "https://cdn.shopify.com/s/files/1/0906/2558/products/BeginnersEssentialsCombo3-WBGimages.jpg?v=1630683820",
+   rating: "5",
+   reviews: "(1)"
+  }
+ ]
+
+ display(data)
+
+    
+    function homepage1(){
+        window.open("index.html","_self")
+    }
+
+  
+
+
+    
+
+    document.querySelector(".loginp").addEventListener("click",login)
+    function login(){
+        event.preventDefault();
+        document.querySelector("#main").style.display = "flex"
+    }
+
+
+
+  document.querySelector(".sort1").addEventListener("click",clear)
+  function clear(){
+      window.location.reload()
+  }
+
+  
+
+  document.querySelector(".sort2").addEventListener("click",htl)
+  function htl(){
+      data.sort(function(m,n){
+          var x = +(m.price)
+          var y = +(n.price)
+          return y-x;
+      })
+      display(data)
+  }
+
+  document.querySelector(".sort3").addEventListener("click",lth)
+  function lth(){
+      data.sort(function(m,n){
+          var x = +(m.price)
+          var y = +(n.price)
+          return x-y;
+      })
+      display(data)
+  }
+  
+  var a = document.querySelector("#makeup2").innerText
+  document.querySelector("#makeup2").innerText = a+data.length+" items"
+
+
+  function display(data1){
+      document.querySelector("#product").innerHTML = ""
+      data1.forEach(element => {
+          var box = document.createElement("div")
+          box.addEventListener("click",function(){
+              atc(element)
+          })
+
+          
+
+          var img = document.createElement("img")
+          img.setAttribute("src",element.img)
+          img.setAttribute("id","pimg")
+
+          var name = document.createElement("h2")
+          name.innerText = element.name.toUpperCase()
+
+          var price = document.createElement("p")
+          price.innerText = "Rs."+element.price
+          price.setAttribute("id","price")
+
+          var rating = document.createElement("div")
+          var star = document.createElement("img")
+          star.setAttribute("src","https://in.sugarcosmetics.com/star_filled.png")
+          var rat = document.createElement("p")
+          rat.innerText = element.rating+element.reviews
+          rating.append(star,rat)
+
+          var sbox = document.createElement("div")
+          sbox.setAttribute("id","sbox")
+          var heartb = document.createElement("div")
+          var heart = document.createElement("img")
+          heart.setAttribute("src","product image/heart-3510.png")
+          heartb.append(heart)
+          var shadeb = document.createElement("div")
+          var select = document.createElement("p")
+          select.innerText = "ADD TO CART"
+          shadeb.append(select)
+          sbox.append(heartb,shadeb)
+
+          box.append(img,name,price,rating,sbox)
+          document.querySelector("#product").append(box)
+        
+
+      });
+  }
+
+  function atc(el){
+      var cart = []
+      cart.push(el)
+      localStorage.setItem("addtocart",JSON.stringify(cart))
+    window.open("addtocart.html","_self")
+  }
+</script>
+
+
+<script src="login.js"></script>
+<script src="register.js"></script>
+<script src="navbar.js"></script>
+<script src="https://kit.fontawesome.com/266a9d5dc8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/48afb18fb2.js" crossorigin="anonymous"></script>
