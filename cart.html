@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://kit.fontawesome.com/173cb482a3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@200&family=Open+Sans&family=Poppins:wght@200;400;600&family=Radio+Canada&family=Roboto&family=Roboto+Condensed:wght@400;700&family=Source+Sans+Pro&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+        @font-face {
+            font-family: Neutra_Display_Titling;
+            src: url(Fonts/Neutra_Display_Titling.otf);
+        }
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            background-color: rgb(239, 242, 247);
+        }
+        #top{
+           margin: 0 auto; width: 90%;margin-top: 40px;display: flex;justify-content: space-between;
+           margin-left: 16px;
+        }
+        .home{
+            display: flex;justify-content: center;align-items: center;float: left;cursor: pointer;
+        }
+        .home>a>p{
+            color: gray;font-family: Quicksand;
+        }
+        .home>a{
+            text-decoration: none;
+        }
+        #ecart{
+            width: 22%;height: 49vh;justify-content: center;align-items: center;
+            margin: auto;margin-top: 70px;text-align: center;
+        }
+        #ecart>img{
+            width: 65%;height: 50%;margin-bottom: 16px;
+        }
+        #ecart>p{
+            font-family: Quicksand;
+        }
+        #ecart>button{
+            border: none;border-radius: 5px;background-color: #fc2779;font-family: Quicksand;
+            padding: 10px 55px 10px 55px;color: white;font-weight: bold;margin-top: 20px;font-size: 16px;
+        }
+        #cart{
+            width: 97%;margin: auto;border-radius: 15px;margin-top: 35px;margin-bottom: 20px;
+            background-color: white;box-shadow: rgba(159, 159, 204, 0.2) 0px 7px 29px 0px;
+            font-family: Quicksand;padding-top: 18px;
+        }
+        #os2{
+            display: flex;margin: auto;height: 22px;width: 96%;
+            justify-content: space-between;
+        }
+        #os{
+            display: flex;justify-content: space-between;width: 48%;
+            height: 100%;
+        }
+        #os>div:nth-child(1){
+            display: flex;
+        }
+        #os>div:nth-child(1)>img{
+            width: 22px;margin-right: 18px;
+        }
+        #os1{
+            display: flex;justify-content: space-between;width: 48%;
+            height: 100%; 
+        }
+        #os1>div{
+            display: flex;
+        }
+        #os1>div>img{
+            width: 22px;margin-right: 8px;
+        }
+        #product1{
+            display: flex;margin: auto;width: 96%;margin-left: 25px;margin-top: 22px;
+            justify-content: space-between;
+        }
+        #aprod{
+            width: 48%;
+        }
+        #aprod>div{
+            display: flex;align-items: center;width: 100%;height: 100px;
+            margin-bottom: 20px;
+        }
+        #pimg{
+            height: 92%;margin-left: 1px;margin-right: 20px;
+        }
+        #aprod>div>h5{
+            font-family: Neutra_Display_Titling;color: gray;width: 38%;font-weight: lighter;
+            font-size: 12px;overflow: hidden;
+        } 
+        #price1{
+            width: 48%;border-radius: 10px;
+            background-color: rgb(239, 242, 247);margin-top: -8px;padding-bottom: 20px;
+        }
+        #deletep{
+            height: 20%;margin-left: 70px;
+        }
+        #dec{
+            margin-left: 20px;height: 22%;margin-right: 6px;
+        }
+        #inc{
+            margin-left: 6px;
+        }
+        #aprod>div>p{
+            font-size: 12px;font-weight: bold;
+        }
+        #pp{
+            margin-left: 20px;
+        }
+        #offers{
+            display: flex;height: 50px;background-color: white;width: 98%;margin: auto;margin-top: 7px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;align-items: center;
+            border-radius: 5px;cursor: pointer;
+        }
+        #offers>img{
+            height: 45%;margin-left: 13px;
+        }
+        #offers>p{
+            color: #fc2779;font-family: Quicksand;font-weight: bold;margin-left: 8px;
+        }
+        #offers>p>span{
+            font-size: 12px;
+        }
+        #offers>div{
+            margin-left: 182px;
+        }
+        #promo{
+            display: flex;height: 50px;background-color: white;width: 98%;margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;align-items: center;
+            cursor: pointer;justify-content: space-between;transition: 0.5s;display: none;
+        }
+        #promo>#promos{
+            border:1px dashed #fc2779;padding: 6px 6px 6px 6px;color: black;background-color: pink;
+            margin-left: 20px;font-weight: bold;
+        }
+        #promo>#apply{
+            margin-right: 20px;color: #fc2779;font-weight: bold;
+        }
+        #apromo{
+            display: flex;width: 95%;margin: auto;margin-top: 18px;align-items: center;
+        }
+        #apromo>p:nth-child(2){
+            margin-left: 10px;
+        }
+        #apromo>input{
+            background-color: white;border: none;margin-left: 10px;height: 38px;font-family: Quicksand;
+            text-align: center;width: 28%;
+        }
+        #apromo>button{
+            height: 38px;border: none;padding: 0px 15px 0px 15px;font-family: Quicksand;
+            border-radius: 5px;margin-left: -2px;color: white;background-color: gray;
+            cursor: pointer;
+        }
+        #mainprice{
+            width: 95.5%;height: 150px; margin: auto;margin-top: 12px;background-color: white;padding-top: 0.2px;
+        }
+        #mainprice>div{
+            display: flex;align-items: center;margin-top: 10px;margin-left: 10px;
+        }
+        #mainprice>div>p{
+            font-size: 14px;margin-left: 8px;
+        }
+        #mainprice>#taxes{
+            margin-top: 4px;margin-left: 28px;
+        }
+        #mainprice>#taxes>p{
+            font-size: 12px;
+        }
+        #finalshoping{
+            margin: auto;margin-top: 15px;width: 95.5%;height: 40px;background-color: white;
+            cursor: pointer;display: flex;align-items: center;
+        }
+        #finalshoping>p{
+            margin-left: 15px;font-size: 14px;width: 22%;margin-right: 20px;
+        }
+        #finalshoping>button{
+            width: 73%;border: none;border-radius: 5px;background-color: black;color: white;height: 100%;
+
+        }
+        #fp{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- ****************************************navbar**************************************** -->
+    <div id="whole_nav">
+
+        <div id="hdoffer">
+            <div><p>FREE eyeshadow palette worth 1199 on a spend of 1199</p></div> 
+            <div><p onclick="cutoffer()">X</p></div>
+        </div>
+    
+        <div id="cont_searchbar">
+          <div id="logo"><img src="https://in.sugarcosmetics.com/desc-images/SUGARLogo1.png" alt="img.logo"> </div>
+    
+          <div  id="searchbar"> <input type="text" placeholder='Try "Liquid Lipstick" '><button>Search</button> </div>
+    
+          <div   id="log"><div id="lg">Log Out</div> </div>
+          
+    
+          <div  id="cartpg">
+              <div> <a href="# "><i class="fa-solid fa-heart"></i></a> </div>
+              <div id="productnos" onclick="cartpage()"> <a href="# "><i class="fa-solid fa-bag-shopping"></i></a> <p></p> </div>
+              <div> <a href=" #"><i class="fa-solid fa-certificate"></i></a> </div>
+          </div>
+        </div>
+    
+        <nav id="nav">
+           <div id="product_pages">
+    
+            <div class="dropdown">
+                <div class="dropbtn"  onclick="makeupp()">MAKEUP</div>
+                <div class="dropdown-content">
+                  <p>LIPS</p>
+                  <p>FACE</p>
+                  <p>EYES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn" onclick="brushpage()">BRUSHES</div>
+                <div class="dropdown-content">
+                  <p>FACE BRUSHIES</p>
+                  <p>EYES BRUSHIES</p>
+                </div>
+              </div>
+              <div class="dropdown">
+                <div class="dropbtn">SKINCARE</div>
+                <div class="dropdown-content">
+                  <p>MOISTURIZER</p>
+                  <p>MASKS</p>
+                  <p>SETTING MISTS</p>
+                  <p>SHEET MASK COMBO</p>
+                  <p>COFFEE CULTURE RANGE</p>
+                </div>
+              </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">TRENDING</div> 
+                    <div class="dropdown-content">
+                        <p>SUGAR MERCH STATION</p>
+                        <p>MAKEUP KITS</p>
+                        <p>BESTSELLERS</p>
+                      </div> 
+                </div>
+                <div class="dropdown"> 
+                    <div class="dropbtn">BLOG</div> 
+                    <div class="dropdown-content">
+                        <p>FEATURED</p>
+                        <p>MAKEUP</p>
+                        <p>SKINCARE</p>
+                      </div>
+                </div>
+                <div class="dropbtn">OFFERS</div>
+           </div>
+        </nav>
+    </div>
+    
+    
+    
+    
+    
+    <!-- *************Login & Signup ************** -->
+    <div id="main">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Login/Sign Up Using Phone</p>
+                </div>
+                <div id="mobno">
+                    <p>+91</p>
+                    <input id="i1" type="tel" maxlength="1" onkeyup="z(event,'i2','','i1')">
+                    <input id="i2" type="tel" maxlength="1" onkeyup="z(event,'i3','i1','i2')">
+                    <input id="i3" type="tel" maxlength="1" onkeyup="z(event,'i4','i2','i3')">
+                    <input id="i4" type="tel" maxlength="1" onkeyup="z(event,'i5','i3','i4')">
+                    <input id="i5" type="tel" maxlength="1" onkeyup="z(event,'i6','i4','i5')">
+                    <input id="i6" type="tel" maxlength="1" onkeyup="z(event,'i7','i5','i6')">
+                    <input id="i7" type="tel" maxlength="1" onkeyup="z(event,'i8','i6','i7')">
+                    <input id="i8" type="tel" maxlength="1" onkeyup="z(event,'i9','i7','i8')">
+                    <input id="i9" type="tel" maxlength="1" onkeyup="z(event,'i10','i8','i9')">
+                    <input id="i10" type="tel" maxlength="1" onkeyup="z(event,'','i9','i10')">
+                    <button >Request OTP</button>
+                </div>
+                <p>Enter your phone number to request an OTP</p>
+                <hr>
+                <p>Enter the 4 digit OTP received on your phone</p>
+                <div id="otp">
+                    <input id="j1" type="tel" maxlength="1" onkeyup="x(event,'j2','','j1')">
+                    <input id="j2" type="tel" maxlength="1" onkeyup="x(event,'j3','j1','j2')">
+                    <input id="j3" type="tel" maxlength="1" onkeyup="x(event,'j4','j2','j3')">
+                    <input id="j4" type="tel" maxlength="1" onkeyup="x(event,'','j3','j4')">
+                </div>
+                <button id="votp">Verify OTP</button><br>
+                <label id="check">
+                    <input type="checkbox" checked>
+                    <span id="z">Get Important Updates on Whatsapp.</span>
+                    <a id="terms" href="https://in.sugarcosmetics.com/pages/terms-conditions" class="tnc">Terms and Conditions</a>
+                </label>
+            </div>
+            <p id="btext">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+    
+    
+    
+    <!-- *************register ************** -->
+    <div id="mainx">
+        <div id="trans"></div>
+        <div id="login">
+            <h4 id="close1">X</h4>
+            <h2>Login/Sign Up</h2>
+            <div id="main1">
+                <div>
+                    <img id="mob" src="https://in.sugarcosmetics.com/smartphone.svg" alt="a">
+                    <p>Welcome!</p>
+                </div>
+                
+                <p id="verify"></p>
+                <div id="fbg">
+                    <img src="https://in.sugarcosmetics.com/desc-images/facebook_login.svg" alt="">
+                    <p>or</p>
+                    <img src="https://in.sugarcosmetics.com/desc-images/google.png" alt="">
+                </div>
+                <hr>
+                <p>Or Enter Account Details</p>
+                <div id="fln">
+                    <input id="fn" type="text" placeholder="First Name">
+                    <input id="ln" type="text" placeholder="Last Name">
+                </div>
+                <input id="ema" type="text" placeholder="Email Address"><br>
+                <button id="sac">Save And Continue</button><br>
+                
+            </div>
+            <p id="btext1">Registering for this site allows you to access your order status and history. Just fill in the
+                fields below, and we'll get a new account set up for you in no time. We will only ask you
+                for information necessary to make the purchase process faster and easier.
+            </p>
+            <p>By Signing up or logging in, you agree to our <a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms and Conditions</a></p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ************cart************** -->
+    <div id="top">
+        <div class="home">
+            <img onclick="homepage1()" src="https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg" alt="a">
+            <a href=""><p id="makeup">&nbsp;&nbsp;/&nbsp;&nbsp;Cart</p></a>
+        </div>
+    </div>
+    <div id="ecart">
+        <img src="https://in.sugarcosmetics.com/ic_empty_cart.png" alt="">
+        <p>Hey! It's lonely here.</p>
+        <p>Your bag seems to have no company.</p>
+        <p>Why not add some products?</p>
+        <button>SHOP NOW</button>
+    </div>
+    <div id="cart">
+        <div id="os2">
+            <div id="os">
+                <div>
+                    <img src="https://in.sugarcosmetics.com/desc-images/shopping_cart.svg" alt="">
+                    <p>Order Summary</p>
+                </div>
+                <div>
+                    <p><u id="carttotal"></u></p>
+                </div>
+            </div>
+            <div id="os1">
+                <div>
+                    <img src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg" alt="">
+                    <p>Offers and Price Details</p>
+                </div>
+            </div>
+        </div>
+        <div id="product1">
+            <div id="aprod">
+                
+                
+            </div>
+            <div id="price1">
+                <nav id="offers" >
+                    <img src="https://in.sugarcosmetics.com/desc-images/Offers_icon.svg" alt="">
+                    <p>Available Offers/ Promos for you! <span>(Click to expand)</span></p>
+                    <div><i class="fa-solid fa-angle-down"></i></div>
+                </nav>
+                <nav id="promo">
+                    <p id="promos">Sugar30</p>
+                    <p id="apply">Apply</p>
+                </nav>
+                <div id="apromo">
+                    <img src="https://in.sugarcosmetics.com/desc-images/GiftCard.svg" alt="">
+                    <p>Gift Card/Discount Code</p>
+                    <input type="text" placeholder="Enter promo code">
+                    <button>Apply</button>
+                </div>
+                <div id="apromo">
+                    <img src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg" alt="">
+                    <p><u>Price Details</u></p>
+                </div>
+                <div id="mainprice">
+                    <div>
+                        <img src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg" alt="">
+                        <p>Cart Sub Total:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;₹</p>
+                        <p id="subtotal"></p>
+                    </div>
+                    <div>
+                        <img src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg" alt="">
+                        <p>Shipping Cost:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;₹&nbsp;0.00</p>
+                    </div>
+                    <div>
+                        <img src="https://in.sugarcosmetics.com/desc-images/Discount.svg" alt="">
+                        <p>Discount Applied:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹</p>
+                        <p id="discou"></p>
+                    </div>
+                    <div>
+                        <img src="https://in.sugarcosmetics.com/desc-images/AmountPayable.svg" alt="">
+                        <p>Amount Payable:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;₹</p>
+                        <p id="fp"></p>
+                    </div>
+                    <div id="taxes"><p>Including all the taxes</p></div>
+                </div>
+                <div id="finalshoping">
+                    <p onclick="homepage1()"> < <u>Continue Shoping</u></p>
+                    <button onclick="paym1()">Proceed to Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!-- ********************footer****************** -->
+
+<div id="footer">
+    <div class="footer-container">
+        <div class="footer-company-logo">
+            <div><img src="https://in.sugarcosmetics.com/Footer_sugar_icon.png" alt="company logo"></div>
+        </div>
+        <div class="footer-reachout-links">
+            <div>
+                <div><a href="https://www.facebook.com/trySUGAR/"><img src="https://in.sugarcosmetics.com/desc-images/facebook.svg" alt=""></a></div>
+                <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Check+this+https://in.sugarcosmetics.com/pages/offer"><i class="fa-solid fa-envelope"></i></a></div>
+                <div><a href="https://www.instagram.com/trysugar/?hl=en"><img src="https://in.sugarcosmetics.com/desc-images/Instagram.svg" alt=""></a></div>
+                <div><a href="https://www.pinterest.com/sugarcosmetics/"><img src="https://in.sugarcosmetics.com/desc-images/Pinterest.svg" alt=""></a></div>
+                <div><a href="https://sugarcosmetics-blog.tumblr.com/"><img src="https://in.sugarcosmetics.com/desc-images/Tumblr.svg" alt=""></a></div>
+                <div><a href="https://www.youtube.com/channel/UCKVqnev2idvmUNKc2b91B8g"><img src="https://in.sugarcosmetics.com/desc-images/Youtube.svg" alt=""></a></div>
+                <div><a href="https://twitter.com/trySUGAR"><img src="https://in.sugarcosmetics.com/sharebtn/Twitter.svg" alt=""></i></a></div>
+            </div>
+        </div>
+        <div class="footer-signup-app">
+            <div>
+                <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
+                <div>
+                    <input type="email" placeholder="Your email address" role="textbox" >
+                    <div class="footer-signup-app-button"><button role="button">SIGN UP</button></div>
+                </div>
+            </div>
+            <div>
+                <h5>GET THE NEW SUGAR APP TODAY.</h5>
+                <div>
+                    <div id="footer-para"><p>Tap into a better shopping experience.</p></div>
+                    <div id="footer-play-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/playstore.png" alt=""></a></div>
+                    <div id="footer-apple-store"><a href="https://sugarcosmetics.app.link/WebFApp"><img src="https://in.sugarcosmetics.com/apple-store.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-information">
+            <div><h5>INFORMATION</h5></div>
+            <div>
+                <div><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">Contact Us</a></div>
+                <div><a href="https://in.sugarcosmetics.com/pages/terms-conditions">Terms & Consitions</a></div>
+                <div><a href="https://in.sugarcosmetics.com/pages/returns-refunds">Returns</a></div>
+                <div><a href="https://in.sugarcosmetics.com/pages/faqs">FAQs</a></div>
+                <div><a href="https://in.sugarcosmetics.com/pages/about-us">About Us</a></div>
+            </div>
+        </div>
+        <div class="footer-get-in-touch">
+            <div><h5>GET IN TOUCH</h5></div>
+            <div>
+                <div class="footer-get-in-touch-box1">
+                    <div>
+                        <img src="https://in.sugarcosmetics.com/desc-images/phone_android_white.svg" alt="">
+                        <div>Call us at</div>
+                    </div>
+                    <a href="">1800-209-9933</a>
+                    <div>Monday to Friday : 9 AM to 7 PM</div>
+                </div>
+                <div class="footer-get-in-touch-box2">
+                    <div>Support</div>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=hello@sugarcosmetics.com">hello@sugarcosmetics.com</a>
+                </div>
+                <div class="footer-get-in-touch-box3">
+                    <div>WORK WITH US</div>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=careers@sugarcosmetics.com">careers@sugarcosmetics.com</a>
+                </div>
+                <div class="footer-get-in-touch-box4">
+                    <div>PRESS & MEDIA</div>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=pr@sugarcosmetics.com">pr@sugarcosmetics.com</a>
+                </div>
+                <div class="footer-get-in-touch-box5">
+                    <div>INFLUENCER COLLAB</div>
+                    <a href="https://blog.sugarcosmetics.com/collab">JOIN US</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>Copyright © 2022 SUGAR Cosmetics. All rights reserved.</div>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+
+    var data = JSON.parse(localStorage.getItem("addToCardData"))
+    
+    if(data.length>0)
+    {
+        document.querySelector("#ecart").style.display = "none"
+    }
+
+    document.querySelector("#offers").addEventListener("click",promo1)
+    function promo1(){
+        document.querySelector("#promo").style.display = "flex"
+    }
+
+
+    function homepage1(){
+        window.open("index.html","_self")
+    }
+
+    function paym1(){
+        window.open("payment.html","_self")
+    }
+
+
+    var sum = sum || 0
+    data.forEach(function(el,i){
+        
+        var count = 1
+        var price = +(el.price)
+        var box = document.createElement("div")
+
+        var img = document.createElement("img")
+        img.setAttribute("id","pimg")
+        img.setAttribute("src",el.img)
+
+        var name = document.createElement("h5")
+        name.innerText = el.name
+
+        var fpric = count*price
+
+        var delimg = document.createElement("img")
+        delimg.setAttribute("id","deletep")
+        delimg.setAttribute("src","cart_image/delete.png")
+        delimg.addEventListener("click",function(){
+            deletep(el,i)
+        })
+
+
+        var deci = document.createElement("img")
+        deci.setAttribute("id","dec")
+        deci.setAttribute("src","cart_image/minus.png")
+        deci.addEventListener("click",decre)
+        function decre(){
+            
+            if(count>1){
+                count--;
+                console.log(count)
+                fpric = count*price
+                sum = sum-price
+                pri.innerText = count+" "+"x"+" "+price+" "+"="+" "+fpric
+                pno.innerText = count
+                document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum+".00"
+                document.querySelector("#subtotal").innerText = " "+sum+".00"
+                document.querySelector("#discou").innerText = +" "+"0.00"
+                document.querySelector("#fp").innerText = " "+sum+".00"
+                document.querySelector("#apply").addEventListener("click",applyp)
+            }
+        }
+
+        var inci = document.createElement("img")
+        inci.setAttribute("id","inc")
+        inci.setAttribute("src","cart_image/add.png")
+        inci.addEventListener("click",incre)
+        function incre(){
+            count++
+            console.log(count)
+            fpric = count*price
+            sum = sum+price
+            pri.innerText = count+" "+"x"+" "+price+" "+"="+" "+fpric
+            pno.innerText = count
+            document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum+".00"
+            document.querySelector("#subtotal").innerText = " "+sum+".00"
+            document.querySelector("#discou").innerText = +" "+"0.00"
+            document.querySelector("#fp").innerText = " "+sum+".00"
+            document.querySelector("#apply").addEventListener("click",applyp)
+        }
+
+        var pno = document.createElement("p")
+        pno.innerText = count
+
+        
+
+        sum = sum+fpric
+
+        var pri = document.createElement("p")
+        pri.setAttribute("id","pp")
+        pri.innerText = count+" "+"x"+" "+price+" "+"="+" "+fpric
+
+        box.append(img,name,delimg,deci,pno,inci,pri)
+
+        document.querySelector("#aprod").append(box);
+    })
+
+    function deletep(ele,index){
+        data.splice(index,1)
+        localStorage.setItem("addToCardData",JSON.stringify(data))
+        window.location.reload();
+    }
+    
+
+    document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum+".00"
+    document.querySelector("#subtotal").innerText = " "+sum+".00"
+    document.querySelector("#discou").innerText = +" "+"0.00"
+    document.querySelector("#fp").innerText = " "+sum+".00"
+    document.querySelector("#apply").addEventListener("click",applyp)
+    function applyp(){
+        document.querySelector("#promo").style.display = "none"
+        document.querySelector("#apromo>input").value = "Sugar30"
+    }
+
+
+    
+    document.querySelector("#apromo>button").addEventListener("click",applyf)
+    function applyf(){
+        var disco = Math.ceil((30/100)*sum)
+        var sum1 = sum-disco
+        document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum1+".00"
+        document.querySelector("#subtotal").innerText = " "+sum1+".00"
+        document.querySelector("#discou").innerText = " "+disco+".00"
+        document.querySelector("#fp").innerText = " "+sum1+".00"
+    }
+</script>
+
+
+<script src="login.js"></script>
+<script src="register.js"></script>
+<script src="navbar.js"></script>
+<script src="https://kit.fontawesome.com/266a9d5dc8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/48afb18fb2.js" crossorigin="anonymous"></script>
