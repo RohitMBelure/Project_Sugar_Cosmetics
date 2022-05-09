@@ -78,7 +78,7 @@ function x1(){
 document.querySelector("#lg").addEventListener("click",logou)
 function logou(){
     usename = null
-    localStorage.setItem("username",JSON.stringify(usename))
+    localStorage.setItem("fullname",JSON.stringify(usename))
     window.location.reload()
 }
 
