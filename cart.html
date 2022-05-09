@@ -204,7 +204,7 @@
         </div>
     
         <div id="cont_searchbar">
-          <div id="logo"><img src="https://in.sugarcosmetics.com/desc-images/SUGARLogo1.png" alt="img.logo"> </div>
+          <div id="logo"><img onclick="homez()" src="https://in.sugarcosmetics.com/desc-images/SUGARLogo1.png" alt="img.logo"> </div>
     
           <div  id="searchbar"> <input type="text" placeholder='Try "Liquid Lipstick" '><button>Search</button> </div>
     
@@ -374,7 +374,7 @@
         <p>Hey! It's lonely here.</p>
         <p>Your bag seems to have no company.</p>
         <p>Why not add some products?</p>
-        <button>SHOP NOW</button>
+        <button onclick="homez()">SHOP NOW</button>
     </div>
     <div id="cart">
         <div id="os2">
@@ -445,7 +445,7 @@
                 </div>
                 <div id="finalshoping">
                     <p onclick="homepage1()"> < <u>Continue Shoping</u></p>
-                    <button onclick="paym1()">Proceed to Payment</button>
+                    <button onclick="paym1()">Delivery Information</button>
                 </div>
             </div>
         </div>
@@ -557,7 +557,21 @@
     }
 
     function paym1(){
-        window.open("payment.html","_self")
+        if(usename == null)
+        {
+            alert("Please Login")
+        }
+        else{
+            var a11 = []
+            var obj11 = {
+                ct:document.querySelector("#subtotal").innerText,
+                dis:document.querySelector("#discou").innerText,
+                amtp:document.querySelector("#fp").innerText
+            }
+            a11.push(obj11)
+            localStorage.setItem("finalprice",JSON.stringify(a11))
+            window.open("delivery.html","_self")
+        }
     }
 
 
