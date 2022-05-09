@@ -187,6 +187,7 @@
         }
         #finalshoping>button{
             width: 73%;border: none;border-radius: 5px;background-color: black;color: white;height: 100%;
+            cursor: pointer;
 
         }
         #fp{
@@ -675,12 +676,18 @@
     
     document.querySelector("#apromo>button").addEventListener("click",applyf)
     function applyf(){
-        var disco = Math.ceil((30/100)*sum)
-        var sum1 = sum-disco
-        document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum1+".00"
-        document.querySelector("#subtotal").innerText = " "+sum1+".00"
-        document.querySelector("#discou").innerText = " "+disco+".00"
-        document.querySelector("#fp").innerText = " "+sum1+".00"
+        if(document.querySelector("#apromo>input").value == "Sugar30")
+        {
+            var disco = Math.ceil((30/100)*sum)
+            var sum1 = sum-disco
+            document.querySelector("#carttotal").innerText = "Cart Total : Rs."+" "+sum1+".00"
+            document.querySelector("#subtotal").innerText = " "+sum1+".00"
+            document.querySelector("#discou").innerText = " "+disco+".00"
+            document.querySelector("#fp").innerText = " "+sum1+".00"
+        }
+        else{
+            alert("Invalid Promocode")
+        }
     }
 </script>
 
