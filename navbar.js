@@ -1,4 +1,4 @@
-var usename = JSON.parse(localStorage.getItem("username"))
+var usename = JSON.parse(localStorage.getItem("fullname"))
 var products = JSON.parse(localStorage.getItem("addToCardData")) || []
 
 
@@ -86,7 +86,7 @@ function logou(){
 var pnoa = []
 document.querySelector("#mobno>button").addEventListener("click",otp)
 function otp(){
-    
+    pnoa = []
     var pno1 = document.querySelector("#i1").value
     pnoa.push(pno1)
     var pno2 = document.querySelector("#i2").value
@@ -138,6 +138,7 @@ function votp(){
         mainx.style.display = "flex"
         document.querySelector("#verify").innerText = "Phone Number Verified"+" "+" "+"(+91)"+" "+pnoa[0]+pnoa[1]+pnoa[2]+pnoa[3]+pnoa[4]+pnoa[5]+pnoa[6]+pnoa[7]+pnoa[8]+pnoa[9]
         alert("OTP Verified")
+        localStorage.setItem("phoneno",JSON.stringify(pnoa))
     }
     else{
         alert("Incorrect OTP")
@@ -155,7 +156,7 @@ function sac(){
     }
     else{
         var dname = fn.value+" "+ln.value
-        localStorage.setItem("username",JSON.stringify(dname))
+        localStorage.setItem("fullname",JSON.stringify(dname))
         var mainx = document.querySelector("#mainx")
         mainx.style.display = "none" 
         document.querySelector("#log").innerHTML=""
