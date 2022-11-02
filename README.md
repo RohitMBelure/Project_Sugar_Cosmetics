@@ -2,7 +2,7 @@
 
 ## URL's:
 * Original website link - https://in.sugarcosmetics.com/
-* Deployed website link - https://stunning-biscochitos-96bb56.netlify.app/
+* Deployed website link - https://beautiful-nasturtium-8b89b4.netlify.app/
 
 ## Tech Stack:
 * HTML
